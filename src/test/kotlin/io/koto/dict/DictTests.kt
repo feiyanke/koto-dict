@@ -17,7 +17,7 @@ class DictTests {
                 .add("defg")
                 .build()
         val r = dict.find("123abcdefg123", exclusive = false)
-        assertEquals(setOf("ab","abc", "bcd", "abcd", "bcde", "cde", "defg"),r)
+        assertEquals(setOf("ab", "abc", "bcd", "abcd", "bcde", "cde", "defg"), r)
     }
 
     @Test
@@ -32,7 +32,7 @@ class DictTests {
                 .add("defg")
                 .build()
         val r = dict.find("123abcdefg123")
-        assertEquals(setOf("abcd", "bcde", "defg"),r)
+        assertEquals(setOf("abcd", "bcde", "defg"), r)
     }
 
     @Test
@@ -47,7 +47,7 @@ class DictTests {
                 .add("defg")
                 .build()
         val r = dict.find("123abcadefg123")
-        assertEquals(setOf("abc", "defg"),r)
+        assertEquals(setOf("abc", "defg"), r)
     }
 
     @Test
@@ -62,7 +62,7 @@ class DictTests {
                 .add("defg")
                 .build()
         val r = dict.find("ababcadefg123")
-        assertEquals(setOf("ab", "abc", "defg"),r)
+        assertEquals(setOf("ab", "abc", "defg"), r)
     }
 
     @Test
@@ -78,7 +78,7 @@ class DictTests {
                 .add("ababcadefg123")
                 .build()
         val r = dict.find("ababcadefg123")
-        assertEquals(setOf("ababcadefg123"),r)
+        assertEquals(setOf("ababcadefg123"), r)
     }
 
     @Test
@@ -94,6 +94,6 @@ class DictTests {
                 .add("ababcbcdefg123")
                 .build()
         val r = dict.find("ababcbcdefg123", false)
-        assertEquals(setOf("ababcbcdefg123", "ab","abc","bcd", "bcde", "cde", "defg"),r)
+        assertEquals(setOf("ababcbcdefg123", "ab", "abc", "bcd", "bcde", "cde", "defg"), r)
     }
 }
